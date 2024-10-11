@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Logistics - 廖志杰</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://github.com/Sethjesus/Photo/blob/main/Carrier.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #444;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 40px;
+        }
+        ul li {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .contact-info a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .contact-info a:hover {
+            background-color: #0056b3;
+        }
+        .profile-pic {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .profile-pic img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+            object-fit: cover;
+        }
+        .message-form {
+            margin-top: 30px;
+        }
+        .message-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        .message-form input, .message-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            transition: border-color 0.3s;
+        }
+        .message-form input:focus, .message-form textarea:focus {
+            border-color: #007bff;
+        }
+        .message-form button {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .message-form button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        /* 添加淡入效果 */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container fade-in">
+        <h1>Panda Logistics</h1>
+        <h2>萬達國際物流</h2>
+        <h3>高級專員廖志杰</h3>
+        <p>專營各式海空運項目</p>
+
+        <h3>海運服務內容：</h3>
+        <ul>
+            <li>整櫃海運 (FCL)</li>
+            <li>散貨拼櫃 (LCL)</li>
+            <li>專案物流規劃</li>
+            <li>國際物流倉儲與配送</li>
+            <li>海運進出口報關服務</li>
+            <li>大件貨物運輸</li>
+        </ul>
+
+        <h3>空運服務內容：</h3>
+        <ul>
+            <li>國際空運進出口</li>
+            <li>緊急空運快遞</li>
+            <li>空運包機服務</li>
+            <li>進出口清關代理</li>
+            <li>貨物追蹤與監控</li>
+            <li>溫控空運貨物處理</li>
+        </ul>
+
+        <div class="contact-info">
+            <h3>聯繫我們：</h3>
+            <a href="https://line.me/ti/p/您的Line帳號" target="_blank">Line</a>
+            <a href="weixin://dl/chat?您的WeChat帳號" target="_blank">WeChat</a>
+            <a href="tel:您的電話號碼">電話: 您的電話號碼</a>
+            <a href="mailto:您的Email地址">Email: 您的Email地址</a>
+        </div>
+
+        <div class="profile-pic">
+            <img src="https://github.com/Sethjesus/Photo/blob/main/Panda.jpg?raw=true" alt="廖志杰大頭照">
+        </div>
+
+        <div class="message-form">
+            <h3>留言區與需求：</h3>
+            <form id="messageForm">
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="contact">聯絡方式：</label>
+                <input type="text" id="contact" name="contact" required>
+
+                <label for="message">需求：</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('您的需求已提交，我們將儘快回覆您！');
+            // 這裡可以添加後續處理邏輯，如發送表單到伺服器
+        });
+    </script>
+
+</body>
+</html>
