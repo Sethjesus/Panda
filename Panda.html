@@ -9,7 +9,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://github.com/Sethjesus/Photo/blob/main/Carrier.jpg?raw=true');
+            background-image: url('images/Carrier.jpg'); /* 使用本地圖片 */
             background-size: cover;
             background-position: center;
         }
@@ -28,15 +28,10 @@
         h1, h2, h3 {
             text-align: center;
             color: #444;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         ul {
             list-style-type: square;
             padding-left: 40px;
-        }
-        ul li {
-            color: #333;
-            margin-bottom: 10px;
         }
         .contact-info {
             margin: 20px 0;
@@ -69,21 +64,12 @@
         .message-form {
             margin-top: 30px;
         }
-        .message-form label {
-            display: block;
-            margin-bottom: 5px;
-            color: #444;
-        }
         .message-form input, .message-form textarea {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
             border-radius: 8px;
             border: 2px solid #ccc;
-            transition: border-color 0.3s;
-        }
-        .message-form input:focus, .message-form textarea:focus {
-            border-color: #007bff;
         }
         .message-form button {
             padding: 12px 25px;
@@ -92,27 +78,15 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
         }
         .message-form button:hover {
             background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-        /* 添加淡入效果 */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container fade-in">
+    <div class="container">
         <h1>Panda Logistics</h1>
         <h2>萬達國際物流</h2>
         <h3>高級專員廖志杰</h3>
@@ -147,12 +121,12 @@
         </div>
 
         <div class="profile-pic">
-            <img src="https://github.com/Sethjesus/Photo/blob/main/Panda.jpg?raw=true" alt="廖志杰大頭照">
+            <img src="images/Panda.jpg" alt="廖志杰大頭照"> <!-- 使用本地圖片 -->
         </div>
 
         <div class="message-form">
             <h3>留言區與需求：</h3>
-            <form id="messageForm">
+            <form name="contact" method="POST" data-netlify="true">
                 <label for="name">姓名：</label>
                 <input type="text" id="name" name="name" required>
 
@@ -166,14 +140,6 @@
             </form>
         </div>
     </div>
-
-    <script>
-        document.getElementById('messageForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('您的需求已提交，我們將儘快回覆您！');
-            // 這裡可以添加後續處理邏輯，如發送表單到伺服器
-        });
-    </script>
 
 </body>
 </html>
